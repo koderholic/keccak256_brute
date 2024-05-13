@@ -9,9 +9,11 @@ import (
 )
 
 const (
-	desiredOutput = "371636862"
+	desiredOutput = "371636862" // Decimal representation of IERC1271.isValidSignature.selector => 0x1626ba7e (hex)
 	fixedA        = "371636862"
-	fixedB        = "17355924313246092532519660475566608967507701394993171841024585092939205358430"
+	/* Decimal representation of keccak256("\x19Ethereum Signed Message:\n3504_brute_power requires brute power")
+	=> 0x265f1ae422b537c21d4f660ba0a1a4d703fc8eba732561832f2070e0a1ecb35e */
+	fixedB = "17355924313246092532519660475566608967507701394993171841024585092939205358430"
 )
 
 func main() {
